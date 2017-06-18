@@ -19,6 +19,7 @@ public:
 
 private slots:
     void slotQuit();
+    void slotTest();
     
 private:
     Ui::CicadaMainWindow *ui;

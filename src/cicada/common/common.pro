@@ -4,7 +4,7 @@
 #
 #-------------------------------------------------
 
-QT       += core
+QT       += core sql
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
@@ -17,9 +17,11 @@ INCLUDEPATH += ./include
 LIBS += -L../../cicada/lib -lcurl
 
 HEADERS += \
-    ccurl.h
+    ccurl.h \
+    cexcelreader.h
 
 SOURCES += \
-    ccurl.cpp
+    ccurl.cpp \
+    cexcelreader.cpp
 
 DESTDIR = ../../cicada/bin
