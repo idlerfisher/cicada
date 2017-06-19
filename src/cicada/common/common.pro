@@ -4,7 +4,7 @@
 #
 #-------------------------------------------------
 
-QT       += core sql
+QT       += core sql qaxcontainer
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
@@ -14,14 +14,18 @@ TARGET = common
 TEMPLATE = lib
 
 INCLUDEPATH += ./include
-LIBS += -L../../cicada/lib -lcurl
+LIBS += -L../../cicada/lib -lcurl -lxl
 
 HEADERS += \
     ccurl.h \
-    cexcelreader.h
+    cexcelreader.h \
+    cdaoyouexcelreader.h
 
 SOURCES += \
     ccurl.cpp \
-    cexcelreader.cpp
+    cexcelreader.cpp \
+    cdaoyouexcelreader.cpp
 
 DESTDIR = ../../cicada/bin
+
+CONFIG += qaxcontainer
