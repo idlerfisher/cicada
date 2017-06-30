@@ -11,10 +11,12 @@ CicadaMainWindow::CicadaMainWindow(QWidget *parent) :
 {
     ui->setupUi(this);
 
+    this->setWindowTitle(tr("蝉 (临时版)"));
     this->setWindowIcon(QIcon(":/images/logo.png"));
 
     connect(ui->actionQuit, SIGNAL(triggered()), this, SLOT(slotQuit()));
     connect(ui->btnTest, SIGNAL(clicked()), this, SLOT(slotTest()));
+    connect(ui->actionAbout, SIGNAL(triggered()), this, SLOT(slotAbout()));
     ui->btnTest->hide();
 
     m_pDyGmUi = new CDaoYouGmUi(this);
@@ -50,5 +52,10 @@ void CicadaMainWindow::slotTest()
 
     CDaoyouExcelReader reader("E:/p22/int/table/物品/物品表.xls");
     reader.load();
+}
+
+void CicadaMainWindow::slotAbout()
+{
+    QMessageBox::about(this, tr("蝉"), tr("作者：guozs"));
 }
 

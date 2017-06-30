@@ -22,6 +22,7 @@ public:
 private slots:
     void slotQuit();
     void slotTest();
+    void slotAbout();
     
 private:
     Ui::CicadaMainWindow *ui;
