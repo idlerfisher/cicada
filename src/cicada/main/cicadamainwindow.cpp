@@ -3,6 +3,7 @@
 #include "ccurl.h"
 //#include "cexcelreader.h"
 #include "cdaoyouexcelreader.h"
+#include "cdaoyougmui.h"
 
 CicadaMainWindow::CicadaMainWindow(QWidget *parent) :
     QMainWindow(parent),
@@ -14,6 +15,10 @@ CicadaMainWindow::CicadaMainWindow(QWidget *parent) :
 
     connect(ui->actionQuit, SIGNAL(triggered()), this, SLOT(slotQuit()));
     connect(ui->btnTest, SIGNAL(clicked()), this, SLOT(slotTest()));
+    ui->btnTest->hide();
+
+    m_pDyGmUi = new CDaoYouGmUi(this);
+    m_pDyGmUi->move(10, 20);
 }
 
 CicadaMainWindow::~CicadaMainWindow()

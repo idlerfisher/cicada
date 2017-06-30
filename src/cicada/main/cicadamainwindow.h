@@ -5,6 +5,8 @@
 #include <QtGui>
 #include <QMainWindow>
 
+class CDaoYouGmUi;
+
 namespace Ui {
 class CicadaMainWindow;
 }
@@ -23,6 +25,7 @@ private slots:
     
 private:
     Ui::CicadaMainWindow *ui;
+    CDaoYouGmUi* m_pDyGmUi;
 };
 
 #endif // CICADAMAINWINDOW_H

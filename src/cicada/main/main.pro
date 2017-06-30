@@ -14,11 +14,13 @@ TARGET = cicada
 TEMPLATE = app
 
 INCLUDEPATH += ../common \
-               ../common/include
+               ../common/include \
+               ../daoyou
 
 LIBS += -L../../cicada/lib \
         -L../../cicada/bin \
-        -lcommon
+        -lcommon \
+        -ldaoyou
 
 SOURCES += main.cpp \
     cicadamainwindow.cpp
